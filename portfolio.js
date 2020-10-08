@@ -21,54 +21,100 @@ $(function () {
   var header = $(".header-nav");
 
   $(window).on("load scroll", function () {
-    if ($(window).scrollTop() < $(".header").offset().top + 100) {
+    // if ($(window).scrollTop() < $(".header").offset().top + 100) {
+    //   header.removeClass("header-nav-default");
+    //   $(".top-btn").addClass("section-top-message-color");
+    // } else {
+    //   header.addClass("header-nav-default");
+    //   $(".top-btn").removeClass("section-top-message-color");
+    // }
+    // if (
+    //   $(".header").offset().top + 100 < $(window).scrollTop() &&
+    //   $(window).scrollTop() < $(".profile").offset().top + 100
+    // ) {
+    //   $(".profile-btn").addClass("section-top-message-color");
+    // } else {
+    //   $(".profile-btn").removeClass("section-top-message-color");
+    // }
+    // if (
+    //   $(".profile").offset().top + 100 < $(window).scrollTop() &&
+    //   $(window).scrollTop() < $(".flow").offset().top + 100
+    // ) {
+    //   $(".flow-btn").addClass("section-top-message-color");
+    // } else {
+    //   $(".flow-btn").removeClass("section-top-message-color");
+    // }
+    // if (
+    //   $(".flow").offset().top + 100 < $(window).scrollTop() &&
+    //   $(window).scrollTop() < $(".service").offset().top + 100
+    // ) {
+    //   $(".service-btn").addClass("section-top-message-color");
+    // } else {
+    //   $(".service-btn").removeClass("section-top-message-color");
+    // }
+    // if (
+    //   $(".service").offset().top + 100 < $(window).scrollTop() &&
+    //   $(window).scrollTop() < $(".works").offset().top + 100
+    // ) {
+    //   $(".works-btn").addClass("section-top-message-color");
+    // } else {
+    //   $(".works-btn").removeClass("section-top-message-color");
+    // }
+    // if (
+    //   $(".works").offset().top + 100 < $(window).scrollTop() &&
+    //   $(window).scrollTop() < $(".contact").offset().top + 100
+    // ) {
+    //   $(".contact-btn").addClass("section-top-message-color");
+    // } else {
+    //   $(".contact-btn").removeClass("section-top-message-color");
+    // }
+    if ($(window).scrollTop() < $(".profile").offset().top) {
       header.removeClass("header-nav-default");
-      $(".top-btn").addClass("section-top-message-color");
     } else {
       header.addClass("header-nav-default");
+    }
+    if ($(window).scrollTop() < $(".profile").offset().top - 100) {
+      $(".top-btn").addClass("section-top-message-color");
+    } else {
       $(".top-btn").removeClass("section-top-message-color");
     }
     if (
-      $(".header").offset().top + 100 < $(window).scrollTop() &&
-      $(window).scrollTop() < $(".profile").offset().top + 100
+      $(".profile").offset().top - 100 <= $(window).scrollTop() &&
+      $(window).scrollTop() < $(".flow").offset().top - 100
     ) {
       $(".profile-btn").addClass("section-top-message-color");
     } else {
       $(".profile-btn").removeClass("section-top-message-color");
     }
     if (
-      $(".profile").offset().top + 100 < $(window).scrollTop() &&
-      $(window).scrollTop() < $(".flow").offset().top + 100
+      $(".flow").offset().top - 100 <= $(window).scrollTop() &&
+      $(window).scrollTop() < $(".service").offset().top - 100
     ) {
       $(".flow-btn").addClass("section-top-message-color");
     } else {
       $(".flow-btn").removeClass("section-top-message-color");
     }
     if (
-      $(".flow").offset().top + 100 < $(window).scrollTop() &&
-      $(window).scrollTop() < $(".service").offset().top + 100
+      $(".service").offset().top - 100 <= $(window).scrollTop() &&
+      $(window).scrollTop() < $(".works").offset().top - 100
     ) {
       $(".service-btn").addClass("section-top-message-color");
     } else {
       $(".service-btn").removeClass("section-top-message-color");
     }
     if (
-      $(".service").offset().top + 100 < $(window).scrollTop() &&
-      $(window).scrollTop() < $(".works").offset().top + 100
+      $(".works").offset().top - 100 <= $(window).scrollTop() &&
+      $(window).scrollTop() < $(".contact").offset().top - 100
     ) {
       $(".works-btn").addClass("section-top-message-color");
     } else {
       $(".works-btn").removeClass("section-top-message-color");
     }
-    if (
-      $(".works").offset().top + 100 < $(window).scrollTop() &&
-      $(window).scrollTop() < $(".contact").offset().top + 100
-    ) {
+    if ($(".contact").offset().top - 100 <= $(window).scrollTop()) {
       $(".contact-btn").addClass("section-top-message-color");
     } else {
       $(".contact-btn").removeClass("section-top-message-color");
     }
-
     $(".slider").slick({
       autoplay: true,
       autoplaySpeed: 4000,
