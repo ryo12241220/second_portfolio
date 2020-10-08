@@ -55,10 +55,12 @@ body {
 
 .headar-message-main {
   font-weight: bold;
-  text-shadow: 2px 2px 1px #333;
+  /* text-shadow: 2px 2px 1px #333; */
   margin-top: 250px;
   padding: 0 0 50px 10%;
   font-size: 2em;
+  font-style: oblique;
+  text-shadow: 0 0 10px #333;
 }
 .nav-unshown {
   display: none; /*チェックボックス非表示*/
@@ -70,9 +72,11 @@ body {
 
 .headar-message-sub {
   font-weight: bold;
-  text-shadow: 2px 2px 1px #333;
+  /* text-shadow: 2px 2px 1px #333; */
   font-size: 1.2em;
   padding: 0 0 50px 10%;
+  font-style: oblique;
+  text-shadow: 0 0 10px #333;
 }
 /*----------------------------------------------------------------------------------------*/
 /*ヘッダーナビの装飾*/
