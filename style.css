@@ -1,6 +1,9 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP");
 body {
   line-height: 1.5em;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Noto Sans KR", sans-serif; */
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .section-top-message {
   padding-top: 100px;
@@ -44,12 +47,12 @@ body {
   height: 70px;
   line-height: 4em;
   position: fixed;
-
   z-index: 5;
   /* background-color: black; */
 }
 
 .header-nav li {
+  opacity: 1;
   margin-right: 30px;
 }
 
@@ -83,6 +86,7 @@ body {
 .header-nav-default {
   color: #333;
   background-color: #f6f6f6;
+
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .section-top-message-color {
@@ -117,6 +121,7 @@ body {
   transform: translate(-70%, -50%);
   border-radius: 1.625rem;
   border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 button {
   position: relative;
@@ -394,7 +399,6 @@ button:hover .button-text {
 .contact-tell {
   font-size: 1.5em;
   color: orange;
-
   display: block;
 }
 .contact-message-top {
@@ -403,6 +407,7 @@ button:hover .button-text {
 .contact-message-sub {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .contact-form {
   margin: 0 auto;
