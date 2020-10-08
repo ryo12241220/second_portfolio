@@ -597,11 +597,12 @@ button:hover .button-text {
   }
   .headar-message-sub {
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 40px;
   }
   #container {
     left: 50%;
-    transform: translate(-50%, 0%);
+    top: 80%;
+    transform: translate(-50%, -80%);
   }
   .profile-img-wrapper {
     width: 80%;
