@@ -1,0 +1,622 @@
+body {
+  line-height: 1.5em;
+  font-family: "Montserrat", sans-serif;
+}
+.section-top-message {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.section-sub-message {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.animation {
+  text-decoration: none;
+  background: linear-gradient(#e3bf00, #e3bf00) 0 100%/ 0 3px no-repeat;
+  transition: 1s;
+}
+.animation-scroll {
+  background-size: 100% 3px;
+}
+/*----------------------------------------------------------------------------------------*/
+/*ヘッダーの装飾*/
+.header {
+  height: 600px;
+  background-color: #333;
+  overflow: hidden;
+  color: white;
+  background-image: url("img/beach.jpeg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.header-img-wrapper {
+  width: 75%;
+  margin: 0 0 0 auto;
+}
+.header-nav {
+  /* position: absolute; */
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+  line-height: 4em;
+  position: fixed;
+
+  z-index: 5;
+  /* background-color: black; */
+}
+
+.header-nav li {
+  margin-right: 30px;
+}
+
+.headar-message-main {
+  font-weight: bold;
+  text-shadow: 2px 2px 1px #333;
+  margin-top: 250px;
+  padding: 0 0 50px 10%;
+  font-size: 2em;
+}
+.nav-unshown {
+  display: none; /*チェックボックス非表示*/
+}
+/* ドロワーナビのややこしい設定 */
+#nav-drawer {
+  display: none; /* PCの時は非表示 */
+}
+
+.headar-message-sub {
+  font-weight: bold;
+  text-shadow: 2px 2px 1px #333;
+  font-size: 1.2em;
+  padding: 0 0 50px 10%;
+}
+/*----------------------------------------------------------------------------------------*/
+/*ヘッダーナビの装飾*/
+.header-nav-default {
+  color: #333;
+  background-color: #f6f6f6;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.section-top-message-color {
+  color: orange;
+}
+.custom-btn {
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  font-family: "Noto Serif JP", cursive;
+  font-style: oblique;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.custom-btn:hover {
+  background: linear-gradient(#e3bf00, #e3bf00) 0 100%/ 0 3px no-repeat;
+  transition: 1s;
+  background-size: 100% 3px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+#container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+  border-radius: 1.625rem;
+  border: 1px solid black;
+}
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: orange;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+/*----------------------------------------------------------------------------------------*/
+/*プロフィールの装飾*/
+.profile {
+  /* height: 550px; */
+  overflow: hidden;
+  padding-bottom: 100px;
+  background-color: #f6f6f6;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.profile-img-wrapper {
+  width: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.profile-img-wrapper img {
+  width: 100%;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.profile-contents {
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid black;
+  margin-left: 20px;
+}
+
+.profile-contents td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+}
+/*----------------------------------------------------------------------------------------*/
+/*制作フローの装飾*/
+
+.flow-item-wrapper {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flow-item {
+  width: 30%;
+  margin-bottom: 50px;
+  border: 0.5px solid #e8e8e8;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2%;
+}
+.flow-item-content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.flow-item-content-wrapper > h5 {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #333;
+  font-size: 0.8em;
+}
+.flow-item-icon {
+  text-align: center;
+  color: orange;
+  font-size: 2em;
+}
+.flow-item-main {
+  margin-top: 20px;
+  margin-bottom: 10x;
+  text-align: center;
+  font-size: 1.3em;
+}
+.flow-item-sub {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #6c757d;
+  background: linear-gradient(transparent 0, transparent 97%, #ddd 100%);
+  background-size: 100% 1.7em;
+  line-height: 1.7em;
+}
+/*----------------------------------------------------------------------------------------*/
+/*サービスの装飾*/
+.service {
+  /* height: 600px; */
+  background-color: #f6f6f6;
+
+  padding-bottom: 50px;
+}
+
+.service-item-wrapper {
+  /* display: flex; */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 30%;
+}
+.service-item-content-wrapper {
+  width: 90%;
+  margin: 20px auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2%;
+}
+.service-item-main {
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20x;
+  text-align: center;
+  font-size: 1.3em;
+}
+.service-item-icon {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: orange;
+  font-size: 2em;
+}
+.service-item-sub {
+  margin: 20px 10px 20px 10px;
+  padding-bottom: 10px;
+  color: #6c757d;
+  text-align: center;
+}
+.slider {
+  margin: 0 auto 20px auto;
+  width: 70%;
+}
+.slider img {
+  height: auto;
+  width: 100%;
+}
+.slick-dots {
+  bottom: none;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+  display: none;
+}
+/*----------------------------------------------------------------------------------------*/
+/*実績の装飾*/
+.works {
+  padding-bottom: 100px;
+  /* background-color: #f6f6f6; */
+}
+
+.works p {
+  text-align: center;
+}
+
+.works-img {
+  margin: 0 auto;
+  width: 50%;
+  background-clip: padding-box;
+}
+
+.works-img-dental {
+  width: 100%;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*お問い合わせの装飾*/
+.contact {
+  text-align: center;
+  padding-bottom: 100px;
+  background-color: #f6f6f6;
+}
+.contact-tell {
+  font-size: 1.5em;
+  color: orange;
+
+  display: block;
+}
+.contact-message-top {
+  margin-top: 70px;
+}
+.contact-message-sub {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contact-form {
+  margin: 0 auto;
+}
+.contact td {
+  padding: 10px;
+  vertical-align: middle;
+  line-height: center;
+}
+.contact td:nth-child(1) {
+  text-align: left;
+}
+.contact td:nth-child(2) {
+  /* display: inline;
+  background-color: orange; */
+  padding: 0;
+  margin: 10px;
+}
+.contact-form-must {
+  display: inline;
+  background-color: orange;
+}
+.text-box-size {
+  width: 100%;
+  padding: 10px;
+}
+.text-box {
+  padding: 10px;
+}
+.textarea-size {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.contact-submit {
+  margin-top: 20px;
+  width: 20%;
+  background-color: orange;
+}
+/*----------------------------------------------------------------------------------------*/
+/*レスポンシブ*/
+@media all and (max-width: 980px) {
+  /*ヘッダー*/
+  .headar-message-main {
+    width: 95%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .headar-message-sub {
+    margin-top: 50px;
+    width: 95%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*プロフィール*/
+  .profile-wrapper {
+    display: block;
+  }
+  .profile-img-wrapper {
+    margin: 0 auto;
+  }
+  .profile-contents {
+    margin: 30px auto 0 auto;
+  }
+  /*フロー*/
+  .flow-item-wrapper {
+    display: block;
+    padding-bottom: 30px;
+  }
+  .flow-item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*サービス*/
+  .service-wrapper {
+    display: block;
+  }
+
+  .service-contents {
+    margin: 30px auto 0 auto;
+  }
+  /*フロー*/
+  .service-item-wrapper {
+    display: block;
+    padding-bottom: 30px;
+  }
+  .service-item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*問い合わせ*/
+  .contact-form th,
+  .contact-form td {
+    width: 100%;
+    display: block;
+  }
+  .contact td:nth-child(1) {
+    text-align: center;
+  }
+}
+@media all and (max-width: 767px) {
+  .headar-message-main {
+    line-height: 2em;
+    margin-top: 150px;
+  }
+  .headar-message-sub {
+    line-height: 2em;
+    margin-top: 20px;
+  }
+
+  #nav-drawer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 10px;
+    margin: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+  }
+  .header-nav {
+    display: none;
+  }
+  .sp-nav-content li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .flow-item-wrapper {
+    width: 70%;
+  }
+  .slider {
+    width: 70%;
+  }
+}
+/* シュッて出てくるやつ */
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100%;
+  background: #0003;
+  transition: 0.3s ease-in-out; /* シュッて速いほうがいいらしい */
+  -webkit-transform: translateX(-100%);
+  transform: translateX(100%); /*右に隠しておく*/
+  -webkit-backdrop-filter: blur(7px); /* モザイクをかけて背景をぼかす */
+  backdrop-filter: blur(7px);
+}
+/*チェック入った時の動作*/
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%); /*中身を表示*/
+  transform: translateX(0%);
+}
+#nav-input:checked ~ #nav-open {
+  visibility: hidden; /*三を非表示(×クローズボタンと被らないように）*/
+}
+/*中身*/
+.sp-nav-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 10px;
+  margin: 20px 0;
+}
+.sp-nav-close {
+  cursor: pointer;
+}
+.sp-nav-content {
+  text-align: left;
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sp-nav-content li {
+  color: white;
+  font-size: 26px;
+}
+.sp-nav-content li:hover {
+  color: blue;
+}
+@media all and (max-width: 480px) {
+  .headar-message-main {
+    font-size: 1.5em;
+    margin-top: 100px;
+  }
+  .headar-message-sub {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  #container {
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .profile-img-wrapper {
+    width: 80%;
+  }
+  .profile-contents {
+    width: 80%;
+  }
+  .profile-contents td {
+    padding-bottom: 0;
+  }
+
+  .flow-item-wrapper {
+    width: 100%;
+  }
+  .slider {
+    width: 100%;
+  }
+  .contact td:nth-child(2) {
+    padding: 0;
+    margin: 0;
+  }
+}
