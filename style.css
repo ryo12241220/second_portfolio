@@ -364,10 +364,10 @@ button:hover .button-text {
 .slick-dots {
   bottom: none;
 }
-.slick-prev:before,
-.slick-next:before {
+.slick-prev,
+.slick-next{
   color: #000;
-  display: none;
+display:none !important;
 }
 /*----------------------------------------------------------------------------------------*/
 /*実績の装飾*/
@@ -596,9 +596,9 @@ button:hover .button-text {
   color: white;
   font-size: 26px;
 }
-.sp-nav-content li:hover {
-  color: blue;
-}
+/* .sp-nav-content li:hover {
+  color: orange;
+} */
 @media all and (max-width: 480px) {
   .headar-message-main {
     font-size: 1.5em;
@@ -632,5 +632,20 @@ button:hover .button-text {
   .contact td:nth-child(2) {
     padding: 0;
     margin: 0;
+  }
+}
+@media all and (max-width: 320px) {
+  .headar-message-main {
+    font-size: 1.3em;
+    margin-top: 100px;
+  }
+  .headar-message-sub {
+    font-size: 1.1em;
+    margin-top: 40px;
+  }
+  #container {
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
   }
 }
