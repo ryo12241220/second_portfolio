@@ -269,6 +269,11 @@ button:hover .button-text {
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.profile-contents > p {
+  background: linear-gradient(transparent 0, transparent 97%, #ddd 100%);
+  background-size: 100% 1.7em;
+  line-height: 1.5em;
+}
 .profile-table {
   margin: 20px auto 0 50px;
   font-size: 0.9em;
@@ -414,7 +419,7 @@ button:hover .button-text {
   border-radius: 2%;
 }
 .service-item-content-wrapper ul {
-  padding-left: 100px;
+  padding-left: 10%;
   padding-right: 20px;
 }
 .service-item-content-wrapper li {
@@ -590,6 +595,7 @@ button:hover .button-text {
     margin: 0 auto;
     width: 80%;
   }
+
   /*フロー*/
   .flow-item-wrapper {
     margin-top: 30px;
@@ -656,6 +662,10 @@ button:hover .button-text {
     padding: 10px;
   }
   .evidence-wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .service-item-content-wrapper {
     width: 95%;
     margin: 0 auto;
   }
