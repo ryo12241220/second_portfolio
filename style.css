@@ -270,9 +270,9 @@ button:hover .button-text {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .profile-contents > p {
-  background: linear-gradient(transparent 0, transparent 97%, #ddd 100%);
+  background: linear-gradient(transparent 0, transparent 97%, #ccc 100%);
   background-size: 100% 1.7em;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 .profile-table {
   margin: 20px auto 0 50px;
