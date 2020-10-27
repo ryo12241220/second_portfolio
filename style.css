@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+JP");
 body {
   line-height: 1.5em;
-  /* font-family: "Noto Sans KR", sans-serif; */
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Noto Serif JP", serif;
+  color: #444;
 }
 .section-top-message {
   padding-top: 100px;
   padding-bottom: 60px;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 2em;
 }
 
 .section-sub-message {
@@ -32,16 +32,27 @@ body {
   overflow: hidden;
   color: white;
   background-image: url("img/top.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: right; */
+
+  position: relative;
+}
+.header::before {
+  /* 透過した黒を重ねる */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* どの範囲に重ねるかを指定 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
 }
 .header-img-wrapper {
   width: 75%;
   margin: 0 0 0 auto;
 }
 .header-nav {
-  /* position: absolute; */
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -49,7 +60,6 @@ body {
   line-height: 4em;
   position: fixed;
   z-index: 5;
-  /* background-color: black; */
 }
 
 .header-nav li {
@@ -57,14 +67,25 @@ body {
   margin-right: 30px;
 }
 
+.header-content-message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  margin: auto;
+}
+
 .headar-message-main {
   font-weight: bold;
-  /* text-shadow: 2px 2px 1px #333; */
-  margin-top: 250px;
+  color: white;
   padding: 0 0 50px 10%;
-  font-size: 2em;
+  font-size: 3em;
   font-style: oblique;
   text-shadow: 0 0 10px #333;
+  line-height: 1.5em;
 }
 .nav-unshown {
   display: none; /*チェックボックス非表示*/
@@ -76,7 +97,6 @@ body {
 
 .headar-message-sub {
   font-weight: bold;
-  /* text-shadow: 2px 2px 1px #333; */
   font-size: 1.2em;
   padding: 0 0 50px 10%;
   font-style: oblique;
@@ -220,7 +240,6 @@ button:hover .button-text {
 /*----------------------------------------------------------------------------------------*/
 /*プロフィールの装飾*/
 .profile {
-  /* height: 550px; */
   overflow: hidden;
   padding-bottom: 100px;
   background-color: #f6f6f6;
@@ -230,6 +249,8 @@ button:hover .button-text {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .profile-img-wrapper {
@@ -242,20 +263,79 @@ button:hover .button-text {
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
-
 .profile-contents {
-  margin-top: auto;
-  margin-bottom: auto;
-  border: 1px solid black;
-  margin-left: 20px;
+  margin-left: 100px;
+  padding: 20px;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.profile-table {
+  margin: 20px auto 0 50px;
+  font-size: 0.9em;
 }
 
-.profile-contents td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid black;
+.profile-table td:first-child {
+  font-weight: bold;
+
+  padding-bottom: 5px;
+  width: 60px;
+}
+/*----------------------------------------------------------------------------------------*/
+.result {
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+.result-wrapper {
+  line-height: 2em;
+
+  width: 60%;
+  border: 0.5px solid #e8e8e8;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  position: relative;
+}
+.result-wrapper ul {
+  position: relative;
+}
+.result-wrapper li {
+  color: black;
+  border-left: solid 8px orange; /*左側の線*/
+  background: whitesmoke; /*背景色*/
+  margin-bottom: 5px; /*下のバーとの余白*/
+  line-height: 1.5;
+  border-radius: 0 15px 15px 0; /*右側の角だけ丸く*/
+  padding: 0.5em;
+  list-style-type: none !important;
+  border-bottom: solid 2px #dadada; /*下に灰色線*/
+}
+/*----------------------------------------------------------------------------------------*/
+.evidence {
+  overflow: hidden;
+  padding-bottom: 100px;
+  background-color: #f6f6f6;
+}
+.evidence-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 19px;
+  background: #eee;
+  border-top: double 5px #333;
+  border-bottom: double 5px #333;
+  line-height: 2;
+}
+.evidence-wrapper ul {
+  margin: 0 auto;
+  width: 98%;
+}
+.evidence-wrapper li {
+  list-style-type: decimal;
+}
+.evidence-wrapper div {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5em;
 }
 /*----------------------------------------------------------------------------------------*/
 /*制作フローの装飾*/
@@ -308,17 +388,16 @@ button:hover .button-text {
 /*----------------------------------------------------------------------------------------*/
 /*サービスの装飾*/
 .service {
-  /* height: 600px; */
   background-color: #f6f6f6;
 
   padding-bottom: 50px;
 }
 
 .service-item-wrapper {
-  /* display: flex; */
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
   margin-top: 20px;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -328,10 +407,19 @@ button:hover .button-text {
   width: 30%;
 }
 .service-item-content-wrapper {
-  width: 90%;
+  width: 70%;
+  padding-bottom: 30px;
   margin: 20px auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 2%;
+}
+.service-item-content-wrapper ul {
+  padding-left: 100px;
+  padding-right: 20px;
+}
+.service-item-content-wrapper li {
+  margin: 0 auto;
+  list-style-type: square;
 }
 .service-item-main {
   padding-top: 20px;
@@ -365,15 +453,14 @@ button:hover .button-text {
   bottom: none;
 }
 .slick-prev,
-.slick-next{
+.slick-next {
   color: #000;
-display:none !important;
+  display: none !important;
 }
 /*----------------------------------------------------------------------------------------*/
 /*実績の装飾*/
 .works {
   padding-bottom: 100px;
-  /* background-color: #f6f6f6; */
   background-image: url("img/work.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -384,7 +471,7 @@ display:none !important;
 }
 
 .works-img {
-  margin: 0 auto;
+  margin: 30px auto;
   width: 50%;
   background-clip: padding-box;
 }
@@ -398,7 +485,6 @@ display:none !important;
 .contact {
   text-align: center;
   padding-bottom: 100px;
-  background-color: #f6f6f6;
 }
 .contact-tell {
   font-size: 1.5em;
@@ -425,8 +511,6 @@ display:none !important;
   text-align: left;
 }
 .contact td:nth-child(2) {
-  /* display: inline;
-  background-color: orange; */
   padding: 0;
   margin: 10px;
 }
@@ -452,15 +536,28 @@ display:none !important;
   width: 20%;
   background-color: orange;
 }
+.caution {
+  color: red;
+  margin-top: 20px;
+}
 /*----------------------------------------------------------------------------------------*/
 /*レスポンシブ*/
 @media all and (max-width: 980px) {
-  /*ヘッダー*/
+  .section-top-message {
+    line-height: 1.5em;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .section-sub-message {
+    width: 95%;
+    margin: 0 auto;
+  }
   .headar-message-main {
     width: 95%;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.7em;
   }
   .headar-message-sub {
     margin-top: 50px;
@@ -472,15 +569,30 @@ display:none !important;
   /*プロフィール*/
   .profile-wrapper {
     display: block;
+    width: 95%;
   }
   .profile-img-wrapper {
     margin: 0 auto;
   }
   .profile-contents {
     margin: 30px auto 0 auto;
+    width: 80%;
+  }
+  .profile-table {
+    margin: 20px;
+  }
+
+  .result-wrapper {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .evidence-wrapper {
+    margin: 0 auto;
+    width: 80%;
   }
   /*フロー*/
   .flow-item-wrapper {
+    margin-top: 30px;
     display: block;
     padding-bottom: 30px;
   }
@@ -489,19 +601,15 @@ display:none !important;
     margin-left: auto;
     margin-right: auto;
   }
-  /*サービス*/
-  .service-wrapper {
-    display: block;
-  }
 
   .service-contents {
     margin: 30px auto 0 auto;
   }
-  /*フロー*/
   .service-item-wrapper {
-    display: block;
+    width: 95%;
     padding-bottom: 30px;
   }
+
   .service-item {
     width: 90%;
     margin-left: auto;
@@ -518,15 +626,6 @@ display:none !important;
   }
 }
 @media all and (max-width: 767px) {
-  .headar-message-main {
-    line-height: 2em;
-    margin-top: 150px;
-  }
-  .headar-message-sub {
-    line-height: 2em;
-    margin-top: 20px;
-  }
-
   #nav-drawer {
     display: flex;
     flex-direction: row;
@@ -547,8 +646,18 @@ display:none !important;
   .flow-item-wrapper {
     width: 70%;
   }
-  .slider {
-    width: 70%;
+  .profile-contents {
+    width: 95%;
+    margin: 30px auto;
+  }
+  .result-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .evidence-wrapper {
+    width: 95%;
+    margin: 0 auto;
   }
 }
 /* シュッて出てくるやつ */
@@ -596,13 +705,10 @@ display:none !important;
   color: white;
   font-size: 26px;
 }
-/* .sp-nav-content li:hover {
-  color: orange;
-} */
+
 @media all and (max-width: 480px) {
   .headar-message-main {
     font-size: 1.5em;
-    margin-top: 100px;
   }
   .headar-message-sub {
     font-size: 1.2em;
@@ -613,11 +719,20 @@ display:none !important;
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  .profile-contents {
+    width: 90%;
+  }
+  .result-wrapper {
+    width: 90%;
+  }
+  .evidence-wrapper {
+    width: 90%;
+  }
   .profile-img-wrapper {
     width: 80%;
   }
-  .profile-contents {
-    width: 80%;
+  .profile-table {
+    margin: 5px;
   }
   .profile-contents td {
     padding-bottom: 0;
@@ -632,20 +747,5 @@ display:none !important;
   .contact td:nth-child(2) {
     padding: 0;
     margin: 0;
-  }
-}
-@media all and (max-width: 320px) {
-  .headar-message-main {
-    font-size: 1.3em;
-    margin-top: 100px;
-  }
-  .headar-message-sub {
-    font-size: 1.1em;
-    margin-top: 40px;
-  }
-  #container {
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -70%);
   }
 }
