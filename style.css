@@ -25,11 +25,15 @@ body {
   padding-bottom: 60px;
   text-align: center;
   font-size: 2em;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .section-sub-message {
   text-align: center;
   margin-bottom: 40px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .animation {
@@ -314,11 +318,15 @@ button:hover .button-text {
   font-size: 3em;
   line-height: 1.5em;
   padding: 0 0 50px 0;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .headar-message-sub {
   font-size: 1.2em;
   padding: 0 0 50px 0;
+  width: 95%;
+  margin: 0 auto;
 }
 
 /*----------------------------------------------------------------------------------------*/
@@ -326,7 +334,6 @@ button:hover .button-text {
 .profile {
   overflow: hidden;
   padding-bottom: 100px;
-  background-color: #f6f6f6;
 }
 
 .profile-wrapper {
@@ -484,6 +491,7 @@ button:hover .button-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -580,11 +588,21 @@ button:hover .button-text {
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .service-item-content-wrapper ul {
-  padding-left: 10%;
-  padding-right: 20px;
+  list-style: disc;
+  padding-left: 15px;
 }
 
 .service-item-content-wrapper li {
@@ -615,6 +633,7 @@ button:hover .button-text {
 /*----------------------------------------------------------------------------------------*/
 /*お問い合わせの装飾*/
 .contact {
+  background-color: #f6f6f6;
   text-align: center;
   padding-bottom: 100px;
 }
@@ -688,6 +707,30 @@ button:hover .button-text {
 /*----------------------------------------------------------------------------------------*/
 /*レスポンシブ*/
 @media all and (max-width: 980px) {
+  #nav-drawer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0 10px;
+    margin: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+  }
+  .header-nav {
+    display: none;
+  }
+  .sp-nav-content li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .profile-section-wrapper,
   .result-section-wrapper,
   .evidence-section-wrapper,
@@ -700,13 +743,14 @@ button:hover .button-text {
   .section-top-message {
     line-height: 1.5em;
   }
+  .section-sub-message {
+    line-height: 1.5em;
+  }
   .headar-message-main {
-    width: 95%;
     line-height: 1.7em;
   }
-  .headar-message-main-sub {
+  .headar-message-sub {
     margin-top: 50px;
-    width: 95%;
   }
   /*プロフィール*/
   .profile-wrapper {
@@ -757,30 +801,6 @@ button:hover .button-text {
   .contact-section-wrapper {
     width: 95%;
   }
-  #nav-drawer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    padding: 0 10px;
-    margin: 20px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 5;
-  }
-  .header-nav {
-    display: none;
-  }
-  .sp-nav-content li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
   .service-item-content-wrapper {
     width: 95%;
   }
@@ -788,14 +808,16 @@ button:hover .button-text {
 
 @media all and (max-width: 480px) {
   .headar-message-main {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
   .headar-message-main-sub {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-top: 40px;
   }
-  .profile-table {
-    margin: 5px;
+  .section-top-message {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-size: 1.6em;
   }
   .profile-contents td {
     padding-bottom: 0;
