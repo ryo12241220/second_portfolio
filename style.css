@@ -608,7 +608,6 @@ button:hover .button-text {
 .service-item-content-wrapper li {
   margin: 0 auto;
   list-style-type: square;
-  list-style-position: inside;
 }
 
 .slider {
@@ -780,6 +779,10 @@ button:hover .button-text {
   .service-item-wrapper {
     width: 95%;
     padding-bottom: 30px;
+  }
+  .service-item-content-wrapper ul {
+    padding-left: 30px;
+    padding-right: 10px;
   }
   /*問い合わせ*/
   .contact-form th,
