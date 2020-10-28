@@ -608,6 +608,7 @@ button:hover .button-text {
 .service-item-content-wrapper li {
   margin: 0 auto;
   list-style-type: square;
+  list-style-position: inside;
 }
 
 .slider {
